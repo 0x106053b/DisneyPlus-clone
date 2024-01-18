@@ -1,0 +1,120 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+body		{ font-family: 'NanumSquare', sans-serif }
+
+.banner{
+    color : white;
+    object-fit : contain;
+    height : 448px;
+}
+
+@media (min-width : 1500px){
+    .banner{
+        position : relative;
+        height : 500px;
+    }
+
+    .banner__fadeBottom{
+        position : absolute;
+        bottom : 0;
+        width : 100%;
+        height : 40rem;
+    }
+}
+
+@media (max-width : 768px){
+    .banner__contents{
+        width : min-content !important;
+        padding-left : 2.3rem;
+        margin-left : 0px !important;
+    }
+
+    .banner_description{
+        font-size : 0.1rem !important;
+        width : auto !important;
+    }
+
+    .info{
+        text-align : start;
+        padding-right : 1.2rem;
+    }
+
+    .space {
+        margin-left : 6px;
+    }
+
+    .banner__button{
+        font-size : 0.8rem !important;
+    }
+
+}
+
+.banner__contents{
+    margin-left : 40px;
+    padding-top : 140px;
+    height : 190px;
+}
+
+.banner__title{
+    text-shadow : 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
+    font-size : 3rem;
+    font-weight : 800;
+    padding-bottom : 0.5rem;
+}
+
+.banner__description{
+    text-shadow : 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
+    width : 50rem;
+    line-height : 1.7;
+    padding-top : 1rem;
+    font-weight : 500;
+    font-size : 1rem;
+    max-width : 400px;
+    height : 80px;
+}
+
+.banner__fadeBottom{
+    height : 7.4rem;
+    background-image: linear-gradient(
+        180deg, trasparent, rgba(37, 37, 37, 0.61),
+        #111
+    );
+}
+
+.banner__buttons{
+    display : flex;
+    flex-direction : row;
+}
+
+.exit__button, .banner__button{
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor : pointer;
+    outline : none;
+    border : none;
+    font-size : 1rem;
+    font-weight : 700;
+    padding : 0.4rem 1rem;
+    margin-right : 1rem;
+    border-radius : 3px;
+}
+
+.exit__button{
+    margin-top : 10px;
+    margin-left : 10px;
+    height : 30px;
+    background-color: white;
+}
+
+.exit__button:hover, .banner__button:hover{
+    color : #000;
+    background-color : rgba(170, 170, 170);
+    transition : all 0.2s;
+    opacity : 1.0;
+    transition-duration : 0.3s;
+}
+
+.play{
+    background-color: white;
+    color : black;
+}
