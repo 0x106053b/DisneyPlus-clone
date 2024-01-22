@@ -1,33 +1,38 @@
-import styled from 'styled-components'
-import './App.css';
+import React from 'react'
+import { Outlet, Routes, Route } from 'react-router-dom'
 import Nav from "./components/Nav"
-import Banner from "./components/Banner"
+import DetailPage from './pages/DetailPage/DetailPage'
+import LoginPage from './pages/LoginPage'
+import MainPage from './pages/MainPage'
+import SearchPage from './pages/SearchPage'
+import './App.css'
 
-function App() {
+
+/* 전체 Layout */
+const Layout = () => {
   return (
-    <Container>
-      <Nav></Nav>
-      <Banner></Banner>
-    </Container>
+    <div>
+      <Nav />
+      <Outlet />
+    </div>
   );
+};
+
+
+/* 중첩 라우팅을 이용하여 Layout을 적용한다. */
+const App = () => {
+  return (
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<LoginPage />}></Route>
+          <Route path="main" element={<MainPage />}></Route>
+          <Route path=":movieId" element={<DetailPage />}></Route>
+          <Route path="search" element={<SearchPage />}></Route>
+        </Route>
+      </Routes>
+    </div>
+  )
 }
 
-export default App;
-
-const Container = styled.main`
-  position : relative;
-  min-height : calc(1000vh - 250px);
-  overflow-x : hidden;
-  display : block;
-  padding : 0 calc(3.5vw + 5px);
-  top : 72px;
-
-  &:after{
-    background : url("/images/home-background.png") center center / cover no-repeat fixed;
-    content : "";
-    position : absolute;
-    inset : 0px;
-    opacity : 1;
-    z-index : -1;
-  }
-`;
+export default App
