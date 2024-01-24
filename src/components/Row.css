@@ -1,4 +1,4 @@
-.slider {
+/* .slider {
     position : relative;
 }
 
@@ -56,36 +56,58 @@
     overflow-x : scroll;
     padding : 20px 0 20px 20px;
     scroll-behavior: smooth;
-}
+} */
 
 /* 각 행의 영화 포스터 아래 overflow scroll 숨기기 */
-.row__posters::-webkit-scrollbar{
-    display : none;
-}
-
-.row__poster{
-    object-fit: contain;
-    width : 100%;
-    max-height: 144px;
-    margin-right : 10px;
-    transition : transform 450ms;
-    border-radius : 4px;
-}
-
-.row__poster:hover{
-    transform : scale(1.2);
-    border : 1px solid rgba(256, 256, 256, 0.7);
-}
-
-@media screen and (max-width : 1200px){
-    .row__poster{
-        max-height : 160px;
+    /* .row__posters::-webkit-scrollbar{
+        display : none;
     }
-}
 
-@media screen and (max-width : 768px){
     .row__poster{
-        max-height : 280px;
+        object-fit: contain;
+        width : 100%;
+        max-height: 144px;
+        margin-right : 10px;
+        transition : transform 450ms;
+        border-radius : 4px;
     }
+
+    .row__poster:hover{
+        transform : scale(1.2);
+        border : 1px solid rgba(256, 256, 256, 0.7);
+    }
+
+    @media screen and (max-width : 1200px){
+        .row__poster{
+            max-height : 160px;
+        }
+    }
+
+    @media screen and (max-width : 768px){
+        .row__poster{
+            max-height : 280px;
+        }
+    } */
+
+.swiper-pagination{
+    text-align : right !important;
 }
 
+.swiper-pagination-bullet{
+    background : grey !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: white !important;
+    opacity : 1 !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color : white !important;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size : 1.3rem !important;
+    font-weight: 600 !important;
+}
