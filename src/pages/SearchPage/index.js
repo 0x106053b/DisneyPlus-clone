@@ -56,6 +56,9 @@ const SearchPage = () => {
               </div>
             )
           }
+          else{
+            return (<div></div>)
+          }
         })}
       </section>
     )

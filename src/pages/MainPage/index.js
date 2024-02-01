@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../../components/Nav';
 import Banner from '../../components/Banner';
 import Category from '../../components/Category';
 import Row from '../../components/Row';
@@ -9,8 +8,7 @@ import './index.css'
 
 const MainPage = () => {
     return (
-        <Container>
-            <Nav></Nav>
+        <Container className="test">
             <Banner></Banner>
             <Category></Category>
             <Row title="Trending Now" id="TN" fetchUrl={requests.fetchTrending}></Row>
@@ -24,18 +22,19 @@ const MainPage = () => {
 export default MainPage
 
 const Container = styled.main`
-  position : relative;
-  overflow-x : hidden;
-  display : block;
-  padding : 0 calc(3.5vw + 5px);
-  top : 72px;
+    position: relative;
+    min-height: calc(100vh - 250px);
+    overflow-x: hidden; 
+    display: block;
+    top: 72px;
+    padding: 0 calc( 3.5vw + 5px );
 
-  &:after{
-    background : url("/images/home-background.png") center center / cover no-repeat fixed;
-    content : "";
-    position : absolute;
-    inset : 0px;
-    opacity : 1;
-    z-index : -1;
+  &:after {
+    background: url("/images/home-background.png") center center / cover no-repeat fixed;
+    content: "";
+    position: absolute; 
+    inset: 0px;
+    opacity: 1;
+    z-index: -1;
   }
 `;

@@ -4,7 +4,7 @@ html body{
 
 .search-container{
     background-color: black;
-    overflow : hidden;
+    overflow-x : hidden;
     width : 100vw;
     height : 100vh;
     text-align : center;
